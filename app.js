@@ -1,26 +1,68 @@
-alert("Bem vindo ao jogo do número secreto!");
-let numeroSecreto = parseInt(Math.random() * 100 + 1);
-let chute;
-let tentativas = 1;
+let listadeNumerosJaSorteados = [];
+let qtdDePossibilidades = 100;
+let numeroSecreto = gerarNumeroAleatorio();
+console.log(numeroSecreto);
 
-// enquanto o chute não for igual ao número secreto
-while (chute != numeroSecreto) {
-  chute = prompt("Escolha um número entre 1 e 100");
-  // se chute for igual ao número secreto
+let qtdTentativas = 1;
+
+mensagemInicial();
+
+function exibirTextoNaTela(tag, texto) {
+  let campo = document.querySelector(tag);
+  campo.innerHTML = texto;
+}
+
+function mensagemInicial() {
+  exibirTextoNaTela("h1", "Jogo do número secreto.");
+  exibirTextoNaTela("p", `Escolha um número entre 1 e ${qtdDePossibilidades}`);
+}
+
+function verificarChute() {
+  let chute = document.querySelector("input").value;
+
   if (chute == numeroSecreto) {
-    break;
+    let palavraTentativa = qtdTentativas > 1 ? "tentativas" : "tentativa";
+    exibirTextoNaTela("h1", "Aee! Você acertou!");
+    exibirTextoNaTela(
+      "p",
+      `Você descobriu o número secreto com ${qtdTentativas} ${palavraTentativa}!`
+    );
+    document.getElementById("reiniciar").removeAttribute("disabled");
   } else {
-    // se chute for maior ou menor que o número secreto
     if (chute > numeroSecreto) {
-      alert(`Você errou! O número secreto é menor que ${chute}`);
+      exibirTextoNaTela("p", "O número secreto é menor");
     } else {
-      alert(`Você errou! O número secreto é maior que ${chute}`);
+      exibirTextoNaTela("p", "O número secreto é maior");
     }
-    tentativas++;
+    qtdTentativas++;
+    limparcampo();
   }
 }
 
-let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
-alert(
-  `Aee! O número secreto é ${numeroSecreto}! Você acertou com ${tentativas} ${palavraTentativa}`
-);
+function limparcampo() {
+  chute = document.querySelector("input");
+  chute.value = "";
+}
+
+function gerarNumeroAleatorio() {
+  let numeroSorteado = parseInt(Math.random() * qtdDePossibilidades + 1);
+  if (listadeNumerosJaSorteados.includes(numeroSorteado)) {
+    return gerarNumeroAleatorio();
+  } else {
+    listadeNumerosJaSorteados.push(numeroSorteado);
+    console.log(listadeNumerosJaSorteados);
+    return numeroSorteado;
+  }
+}
+
+function reiniciarJogo() {
+  if (listadeNumerosJaSorteados.length == qtdDePossibilidades) {
+    listadeNumerosJaSorteados = [];
+  }
+  numeroSecreto = gerarNumeroAleatorio();
+  limparcampo();
+  qtdTentativas = 1;
+  mensagemInicial();
+  document.getElementById("reiniciar").setAttribute("disabled", true);
+  console.log(numeroSecreto);
+}

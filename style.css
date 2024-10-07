@@ -1,88 +1,90 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: white;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap");
+
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --primary-color: #f6ffde;
+  --bg-color: #aac8a7;
 }
 
 body {
-    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
 }
-
-
 body::before {
-    background-image: url("img/code.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
+  background-image: url("img/code.png");
+  background-position: center;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  opacity: 0.8;
 }
-
-.container {
-    width: 1200px;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 24px;
-    border: 1px solid #1875E8;
-    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
-    background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
-    position: relative;
-}
-
-.container__conteudo {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-}
-
-.container__informacoes {
-    flex: 1;
-    padding: 20px;
-}
-
-.container__botao {
-    border-radius: 16px;
-    background: #1875E8;
-    padding: 16px 24px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: 700;
-    border: none;
-    margin-top: 16px;
-}
-
-.container__texto {
-    margin: 16px 0 16px 0;
-}
-
-.container__texto-azul {
-    color: #1875E8;
-}
-
 h1 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
+  font-size: 5em;
+  margin: 0;
+}
+p {
+  font-size: 1.5em;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.container__conteudo {
+  display: flex;
+  align-items: center;
+}
+.container__botoes {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+}
+.container__botao {
+  border-radius: 16px;
+  padding: 12px 15px;
+  width: 20%;
+  color: rgb(82, 82, 82);
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+.container__botao:active {
+  transform: scale(0.98);
+  background-color: rgb(220, 220, 220);
+}
+.container__input {
+  width: 10%;
+  height: 18px;
+  border-radius: 16px;
+  background-color: #fff;
+  border: none;
+  padding: 2rem;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+.mensagem {
+  font-size: 1.5em;
+  margin-top: 40px;
 }
 
-h2,
-p,
-button {
-    font-family: 'Inter', sans-serif;
-}
-
-h2 {
-    font-size: 32px;
-    font-weight: 400;
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 3em;
+  }
 }
