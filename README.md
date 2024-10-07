@@ -1,14 +1,10 @@
 <h2 align="center"> 
 Jogo do Número Secreto
   </h2>
-<h4 align="center"> 
-    :construction:  Projeto em construção  :construction:
-</h4>
-<p>
-  :memo: Projeto desenvolvido no curso de lógica de programação com javascript da Alura.
-</p>
 
-O Jogo do Número Secreto é uma aplicação interativa que desafia os jogadores a adivinharem um número aleatório dentro de um intervalo determinado. Com uma interface intuitiva e recursos dinâmicos, o projeto buscar ensinar conceitos de programação front-end, oferecendo ao mesmo tempo uma experiência de usuário agradável e divertida.
+<p>
+  :memo: O Jogo do Número Secreto é uma aplicação interativa que desafia os jogadores a adivinharem um número aleatório entre 1 e 100. Com uma interface intuitiva e recursos dinâmicos, o projeto foi criado para aprender e treinar lógica de programação com JavaScrip, oferecendo ao mesmo tempo uma experiência de usuário agradável e divertida.
+</p>
 
 <h3>
   :hammer: Funcionalidades do projeto
