@@ -1,5 +1,9 @@
 <h2 align="center"> 
 Jogo do Número Secreto
+
+<p align="center">
+  <img src="./img/preview.png" alt="Preview do Jogo do Número Secreto">
+</p>
   </h2>
 <h4 align="center"> 
     :construction:  Projeto em construção  :construction:
