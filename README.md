@@ -7,7 +7,7 @@ Jogo do Número Secreto
 </p>
 
 <p>
-  :memo: O Jogo do Número Secreto é uma aplicação interativa que desafia os jogadores a adivinharem um número aleatório entre 1 e 100. Com uma interface intuitiva e recursos dinâmicos, o projeto foi criado para aprender e treinar lógica de programação com JavaScript, oferecendo ao mesmo tempo uma experiência de usuário agradável e divertida.
+ O Jogo do Número Secreto é uma aplicação interativa que desafia os jogadores a adivinharem um número aleatório entre 1 e 100. Com uma interface intuitiva e recursos dinâmicos, o projeto foi criado para aprender e treinar lógica de programação com JavaScript, oferecendo ao mesmo tempo uma experiência de usuário agradável e divertida.
 </p>
 
 <h3>
