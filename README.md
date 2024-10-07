@@ -14,7 +14,7 @@ O Jogo do Número Secreto é uma aplicação interativa que desafia os jogadores
   :hammer: Funcionalidades do projeto
 </h3>
 
-- Geração de Número Secreto: O jogo gera aleatoriamente um número secreto dentro de um intervalo definido pelo usuário.
+- Geração de Número Secreto: O jogo gera aleatoriamente um número secreto entre 1 e 100.
 - Interface Gráfica Intuitiva: Uma interface de usuário amigável que permite aos jogadores interagirem facilmente com o jogo.
 - Adivinhação do Número: Os jogadores podem inserir palpites para tentar adivinhar o número secreto.
 - Feedback de Adivinhação: O jogo fornece feedback imediato aos jogadores após cada tentativa, indicando se o palpite é maior, menor ou correto.
